@@ -1,0 +1,57 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="18" y="18" width="924" height="524" rx="28" fill="#FAFBF9" stroke="#D9E1DC" stroke-width="2"/>
+
+  <g>
+    <text x="96" y="236" fill="#1E6A55" font-family="Avenir Next, Manrope, sans-serif" font-size="38" font-weight="700">
+      For every mood,
+    </text>
+    <text x="96" y="284" fill="#23332E" font-family="Avenir Next, Manrope, sans-serif" font-size="38" font-weight="700">
+      find your north.
+    </text>
+  </g>
+
+  <g transform="translate(0 6)">
+    <circle cx="660" cy="274" r="154" fill="#F4F7F3"/>
+    <circle cx="660" cy="274" r="154" stroke="#D6DFDA" stroke-width="2"/>
+
+    <path d="M660 274L660 120C716.364 120 769.624 145.652 805.179 189.644L660 274Z" fill="#A9D8C4"/>
+    <path d="M660 274L805.179 189.644C829.754 222.144 843 260.724 843 301.471L660 274Z" fill="#CBE8D6"/>
+    <path d="M660 274L843 301.471C836.882 355.262 803.154 402.069 752.305 427.273L660 274Z" fill="#F0D37B"/>
+    <path d="M660 274L752.305 427.273C711.775 451.093 663.994 459.201 617.917 450.113L660 274Z" fill="#E7B06A"/>
+    <path d="M660 274L617.917 450.113C567.208 438.006 524.314 404.806 500.97 358.258L660 274Z" fill="#D88976"/>
+    <path d="M660 274L500.97 358.258C478.358 315.654 475.655 265.15 493.675 220.318L660 274Z" fill="#E6B2AF"/>
+    <path d="M660 274L493.675 220.318C515.292 153.405 581.347 120 660 120V274Z" fill="#DFECE6"/>
+
+    <circle cx="660" cy="274" r="118" fill="#FFFFFF" stroke="#D9E1DC" stroke-width="2"/>
+    <circle cx="660" cy="274" r="82" stroke="#1D6A55" stroke-width="8" stroke-linecap="round" stroke-dasharray="11 16"/>
+
+    <path d="M660 191L692 274L660 259L628 274L660 191Z" fill="#1D6A55"/>
+    <path d="M660 355L677 302L660 311L643 302L660 355Z" fill="#C7D9D0"/>
+    <circle cx="660" cy="274" r="22" fill="#FFFFFF" stroke="#1D6A55" stroke-width="3"/>
+
+    <circle cx="660" cy="103" r="24" fill="#FFFFFF" stroke="#D1DBD5" stroke-width="2"/>
+    <circle cx="652" cy="96" r="3.8" fill="#517264"/>
+    <circle cx="668" cy="96" r="3.8" fill="#517264"/>
+    <path d="M650 112C655 119 665 119 670 112" stroke="#517264" stroke-width="3" stroke-linecap="round"/>
+
+    <circle cx="837" cy="275" r="24" fill="#FFFFFF" stroke="#D1DBD5" stroke-width="2"/>
+    <circle cx="829" cy="268" r="3.8" fill="#917222"/>
+    <circle cx="845" cy="268" r="3.8" fill="#917222"/>
+    <path d="M826 281H848" stroke="#917222" stroke-width="3" stroke-linecap="round"/>
+
+    <circle cx="660" cy="446" r="24" fill="#FFFFFF" stroke="#D1DBD5" stroke-width="2"/>
+    <circle cx="652" cy="439" r="3.8" fill="#8A522B"/>
+    <circle cx="668" cy="439" r="3.8" fill="#8A522B"/>
+    <path d="M649 456C654 448 666 448 671 456" stroke="#8A522B" stroke-width="3" stroke-linecap="round"/>
+
+    <circle cx="483" cy="275" r="24" fill="#FFFFFF" stroke="#D1DBD5" stroke-width="2"/>
+    <circle cx="475" cy="268" r="3.8" fill="#8B5650"/>
+    <circle cx="491" cy="268" r="3.8" fill="#8B5650"/>
+    <path d="M472 284H494" stroke="#8B5650" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M660 84V66" stroke="#B8C8C1" stroke-width="3" stroke-linecap="round"/>
+    <path d="M660 482V464" stroke="#B8C8C1" stroke-width="3" stroke-linecap="round"/>
+    <path d="M447 274H429" stroke="#B8C8C1" stroke-width="3" stroke-linecap="round"/>
+    <path d="M873 274H891" stroke="#B8C8C1" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
