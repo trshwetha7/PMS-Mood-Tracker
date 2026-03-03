@@ -80,6 +80,36 @@ PMS Mood Compass is useful as a portfolio project because it brings together:
 
 It is also a practical example of how machine learning can be applied to everyday self-tracking data in a way that stays understandable to end users.
 
+## Screenshots
+Save your four screenshots in this folder, in this exact order:
+
+```text
+assets/screenshots/1.png
+assets/screenshots/2.png
+assets/screenshots/3.png
+assets/screenshots/4.png
+```
+
+### 1. Setup Experience
+<p align="center">
+  <img src="assets/screenshots/1.png" alt="PMS Mood Compass setup experience" width="900" />
+</p>
+
+### 2. Insight Signals
+<p align="center">
+  <img src="assets/screenshots/2.png" alt="Main pattern signals and chart" width="900" />
+</p>
+
+### 3. Logged Day Explanation And Forecast
+<p align="center">
+  <img src="assets/screenshots/3.png" alt="Logged symptom load explanation and forecast" width="900" />
+</p>
+
+### 4. Cycle Tip Modal
+<p align="center">
+  <img src="assets/screenshots/4.png" alt="Cycle tip modal" width="900" />
+</p>
+
 ## Core Product Areas
 ### Setup
 - add, edit, and remove period start dates
