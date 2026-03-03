@@ -122,4 +122,4 @@ It is also a practical example of how machine learning can be applied to everyda
 - The quality of the insights depends on the consistency and volume of user-entered data.
 
 ## Author
-Created by **Tr Shwetha**.
+Created by **Shwetha Tinnium Raju**.
