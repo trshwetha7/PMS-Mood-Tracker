@@ -1,6 +1,6 @@
 # PMS Mood Compass
 
-PMS Mood Compass is a full-stack portfolio project that helps users track cycle-related symptoms, lifestyle patterns, and day-to-day wellbeing. It combines a clean web interface with a Python machine learning service to estimate symptom load, surface likely pattern drivers, and forecast the next 7 days.
+PMS Mood Compass is a full-stack app that helps users track cycle-related symptoms, lifestyle patterns, and day-to-day wellbeing. It combines a clean web interface with a Python machine learning service to estimate symptom load, surface likely pattern drivers, and forecast the next 7 days.
 
 ## Overview
 Many cycle-tracking tools focus on logging alone. PMS Mood Compass is designed to go one step further: it turns daily entries into interpretable pattern insights.
