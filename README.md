@@ -1,9 +1,9 @@
 # PMS Mood Compass
 
-PMS Mood Compass is a full-stack app that helps users track cycle-related symptoms, lifestyle patterns, and day-to-day wellbeing. It combines a clean web interface with a Python machine learning service to estimate symptom load, surface likely pattern drivers, and forecast the next 7 days.
+PMS Mood Compass is a full-stack machine learning app for tracking cycle-related symptoms, lifestyle patterns, and daily wellbeing. It combines a web interface with a Python ML service to estimate symptom load, surface likely pattern drivers, and forecast short-term symptom trends.
 
 ## Overview
-Many cycle-tracking tools focus on logging alone. PMS Mood Compass is designed to go one step further: it turns daily entries into interpretable pattern insights.
+Many cycle-tracking tools focus mainly on logging. PMS Mood Compass is designed to go a step further by turning daily entries into interpretable pattern insights.
 
 Users can:
 - log symptoms and lifestyle factors day by day
@@ -15,8 +15,11 @@ Users can:
 
 This project is informational only and is not medical advice.
 
+## Why I Built This
+I wanted to build a project that treats cycle-related self-tracking as a real machine learning problem rather than just a logging workflow. The goal was to work with noisy user-generated time-series data, build cycle-aware features, generate short-term forecasts, and present the outputs in a way that stays understandable to end users.
+
 ## What The App Measures
-The app works with two related ideas:
+The app works with two related quantities:
 
 ### 1. Logged Symptom Score
 This is the score calculated from the symptom sliders the user enters for a given day.
@@ -55,33 +58,33 @@ Mood is handled differently from the other symptom sliders:
 - `0 = very low mood`
 - `5 = very good mood`
 
-Because a better mood should reduce symptom burden, the score uses an inverted mood contribution internally.
+Because better mood should reduce overall symptom burden, the score uses an inverted mood contribution internally.
 
 ## Machine Learning Approach
-The backend is built as a non-linear regression service in FastAPI.
+The backend is built as a FastAPI-based regression service.
 
 At a high level, the model:
 - learns from time-ordered daily logs
 - uses cycle-aware and lifestyle-aware features
 - predicts symptom load rather than raw symptom values
-- compares its performance against a simple baseline
-- returns both global and local interpretability outputs
+- compares performance against a simple baseline
+- returns both overall and day-level interpretability outputs
 
-The project supports an AutoML-first workflow with strong tree-based fallbacks, so the backend can select an appropriate non-linear regressor while keeping inference fast and interpretable.
+The project follows an AutoML-first workflow with strong tree-based fallbacks so the backend can choose an appropriate non-linear regressor while keeping inference fast and reasonably interpretable.
 
-## Why This Project Is Useful
-PMS Mood Compass is useful as a portfolio project because it brings together:
-- product thinking
-- frontend UX for health-style tracking
-- API design with FastAPI
-- ML problem framing for user-generated daily data
-- feature engineering for cycle-aware forecasting
-- interpretable model outputs instead of black-box predictions only
+## What This Project Demonstrates
+This project brings together:
+- product thinking for a health-oriented use case
+- frontend UX for structured daily tracking
+- FastAPI backend design
+- machine learning problem framing for user-generated time-series data
+- cycle-aware feature engineering and short-term forecasting
+- interpretable outputs instead of black-box predictions alone
 
-It is also a practical example of how machine learning can be applied to everyday self-tracking data in a way that stays understandable to end users.
+It is also a practical example of how ML can be applied to everyday self-tracking data in a way that stays useful and understandable.
 
 ## Screenshots
-Save your four screenshots in this folder, in this exact order:
+Store screenshots in the following folder structure:
 
 ```text
 assets/screenshots/1.png
@@ -106,7 +109,7 @@ assets/screenshots/4.png
   <img src="assets/screenshots/4.png" alt="Cycle tip modal" width="900" />
 </p>
 
-## Core Product Areas
+## Main Features
 ### Setup
 - add, edit, and remove period start dates
 - estimate cycle length from recent entries
@@ -125,11 +128,19 @@ assets/screenshots/4.png
 - explain a selected logged day
 - forecast the next 7 days
 
+## Core ML Idea
+Instead of predicting raw symptoms independently, the model predicts a daily symptom-load score using non-symptom context such as cycle timing, sleep, stress, caffeine intake, workout activity, previous-day history, and optional sensor inputs.
+
+This makes it possible to compare:
+- what the user logged
+- what the model expected
+- where the day was better or worse than expected
+
 ## Technical Stack
 - Frontend: Next.js (App Router) + TypeScript
 - Backend: FastAPI + Python
 - ML: AutoML-assisted non-linear regression with boosted-tree fallbacks
-- Data handling: Pydantic, pandas, NumPy
+- Data: pandas, NumPy, Pydantic
 - Persistence: session-based frontend storage + backend model artifacts
 
 ## Repository Structure
@@ -142,10 +153,11 @@ assets/screenshots/4.png
   .gitignore
 ```
 
-## Notes
+## Limitations
 - This project is informational only and not intended for diagnosis or treatment.
-- Model outputs represent learned associations from logged data, not causation.
-- The quality of the insights depends on the consistency and volume of user-entered data.
+- Model outputs reflect learned associations from logged data, not causal conclusions.
+- Insight quality depends on the consistency and quantity of user-entered data.
+- Forecasts are designed to be informative, not clinically validated.
 
 ## Author
 Created by **Shwetha Tinnium Raju**.
