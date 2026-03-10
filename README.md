@@ -1,6 +1,12 @@
 # PMS Mood Compass
 
-PMS Mood Compass is a full-stack machine learning app for tracking cycle-related symptoms, lifestyle patterns, and daily wellbeing. It combines a web interface with a Python ML service to estimate symptom load, surface likely pattern drivers, and forecast short-term symptom trends.
+PMS Mood Compass is a full-stack machine learning app for tracking cycle-related symptoms, lifestyle patterns, and daily wellbeing. It combines a web interface with a Python ML service to estimate symptom load, highlight likely pattern drivers, and forecast short-term symptom trends from user-entered daily data.
+
+## Highlights
+- full-stack machine learning app for cycle-related symptom tracking
+- interpretable symptom-load modeling and short-term forecasting
+- FastAPI backend with cycle-aware feature engineering
+- user-facing insights designed to stay understandable
 
 ## Overview
 Many cycle-tracking tools focus mainly on logging. PMS Mood Compass is designed to go a step further by turning daily entries into interpretable pattern insights.
@@ -16,7 +22,7 @@ Users can:
 This project is informational only and is not medical advice.
 
 ## Why I Built This
-I wanted to build a project that treats cycle-related self-tracking as a real machine learning problem rather than just a logging workflow. The goal was to work with noisy user-generated time-series data, build cycle-aware features, generate short-term forecasts, and present the outputs in a way that stays understandable to end users.
+I wanted to build a project that treats cycle-related self-tracking as a real machine learning problem rather than just a logging workflow. The goal was to work with noisy user-generated time-series data, build cycle-aware features, generate short-term forecasts, and present the outputs in a way that remains understandable to end users.
 
 ## What The App Measures
 The app works with two related quantities:
@@ -32,7 +38,7 @@ A score like `1.83 / 5` means relatively lighter symptom load.
 A score like `5.00 / 5` means very high symptom load.
 
 ### 2. Model Expectation
-The machine learning model estimates what symptom load the day was likely to have based on non-symptom context such as:
+The machine learning model estimates the symptom load that would be expected for a given day based on non-symptom context such as:
 - cycle timing
 - sleep
 - stress
@@ -42,9 +48,9 @@ The machine learning model estimates what symptom load the day was likely to hav
 - optional sensor inputs
 
 This makes it possible to compare:
-- what was logged
+- what the user logged
 - what the model expected
-- where the model underestimated or overestimated the day
+- where the day was better or worse than expected
 
 ## Scoring Logic
 The logged symptom score is built from a weighted symptom formula.
@@ -70,7 +76,7 @@ At a high level, the model:
 - compares performance against a simple baseline
 - returns both overall and day-level interpretability outputs
 
-The project follows an AutoML-first workflow with strong tree-based fallbacks so the backend can choose an appropriate non-linear regressor while keeping inference fast and reasonably interpretable.
+The project follows an AutoML-first workflow with tree-based fallback models to balance predictive performance, inference speed, and interpretability.
 
 ## What This Project Demonstrates
 This project brings together:
@@ -79,12 +85,12 @@ This project brings together:
 - FastAPI backend design
 - machine learning problem framing for user-generated time-series data
 - cycle-aware feature engineering and short-term forecasting
-- interpretable outputs instead of black-box predictions alone
+- interpretable outputs rather than black-box predictions alone
 
-It is also a practical example of how ML can be applied to everyday self-tracking data in a way that stays useful and understandable.
+It is also a practical example of how machine learning can be applied to everyday self-tracking data in a way that stays useful and understandable.
 
 ## Screenshots
-Store screenshots in the following folder structure:
+Screenshots are stored in the following folder structure:
 
 ```text
 assets/screenshots/1.png
@@ -123,13 +129,13 @@ assets/screenshots/4.png
 
 ### Insights
 - train or refresh the model on current session data
-- compare model error against a simple baseline
-- see major pattern signals
+- compare model performance against a simple baseline
+- surface major pattern signals
 - explain a selected logged day
 - forecast the next 7 days
 
 ## Core ML Idea
-Instead of predicting raw symptoms independently, the model predicts a daily symptom-load score using non-symptom context such as cycle timing, sleep, stress, caffeine intake, workout activity, previous-day history, and optional sensor inputs.
+Instead of predicting individual symptoms independently, the model predicts a daily symptom-load score using non-symptom context such as cycle timing, sleep, stress, caffeine intake, workout activity, previous-day history, and optional sensor inputs.
 
 This makes it possible to compare:
 - what the user logged
@@ -145,9 +151,10 @@ This makes it possible to compare:
 
 ## Repository Structure
 ```text
-/
+/  
   frontend/      Next.js application
   backend/       FastAPI ML service
+  assets/        Screenshots used in the README
   sample_data.csv
   README.md
   .gitignore
